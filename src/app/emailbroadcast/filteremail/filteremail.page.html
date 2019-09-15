@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="colorfff"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+       Filter
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+    <div class="fullP p15">
+    <ion-card class="cardCss mt10">
+      <ion-row>
+        <ion-col size="5">
+          <ion-label class="textColor fontCan fw600 f16">City</ion-label>
+        </ion-col>
+        <ion-col size="7">
+          <ion-select [(ngModel)]="cityadd" class="textColor">
+            <ion-select-option selected="true" value="">Select City</ion-select-option>
+            <ion-select-option *ngFor="let row of citylist">{{row.city}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <ion-card class="cardCss">
+  <ion-row>
+    <ion-col size="5">
+      <ion-label class="textColor fontCan fw600 f16">Group</ion-label>
+    </ion-col>
+    <ion-col size="7">
+      <ion-select [(ngModel)]="groupadd" class="textColor">
+        <ion-select-option selected="true" value="">Select Group</ion-select-option>
+        <ion-select-option *ngFor="let row of grouplist">{{row.groupname}}</ion-select-option>
+      </ion-select>
+    </ion-col>
+  </ion-row>
+   </ion-card> 
+   </div> 
+  
+  <div class="mt10 btndiv">
+      <ion-button expand="block" class="loginBtn fontCan" (click)="emailSearch()">Search</ion-button>
+  </div>
+</ion-content>

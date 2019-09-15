@@ -1,0 +1,95 @@
+#cke_88{display: none;}
+#cke_24{display: none;}
+#cke_17{display: none;}
+#cke_32{display: none;}
+#cke_33{display: none;}
+#cke_34{display: none;}
+#cke_35{display: none;}
+#cke_36{display: none;}
+#cke_38{display: none;}
+#cke_39{display: none;}
+#cke_40{display: none;}
+#cke_41{display: none;}
+#cke_42{display: none;}
+#cke_43{display: none;}
+#cke_44{display: none;}
+#cke_45{display: none;}
+#cke_46{display: none;}
+#cke_61{display: none;}
+#cke_62{display: none;}
+#cke_67{display: none;}
+#cke_68{display: none;}
+#cke_69{display: none;}
+#cke_76{display: none;}
+#cke_73{display: none;}
+
+.loginBtn{
+    --background: #3284e8;
+    --border-radius: 50px;
+    height: 50px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    }
+  .btndiv{
+    position: absolute;
+    width: 96%;
+    bottom: 3%;
+  }  
+  ion-item {
+    --highlight-color-valid: #3284e8;
+    --highlight-color-invalid: #3284e8;
+  }
+  .cke_1 .cke_top {
+    background-color: #fff !important;
+  }
+  .cke_1 .cke_bottom {
+    background-color: #fff !important;;
+  }
+  .pos_abs {position: absolute;}
+  .w40p{width: 40%;}
+  .w20p{width: 20%;}
+  .image_div{    
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border-radius: 50%;
+    line-height: 150px;
+    font-size: 18px;
+    text-align: center;
+    position: relative;}
+.file_chooser{    
+  height: 50px;
+  width: 150px;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  z-index: 99999;
+}
+.left220{ left: 220px;}
+.imgPlaceholder{
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+  background-color: #eceff1;
+  line-height: 150px;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.textCopy{
+  width: 90%;
+  background: transparent;
+  border: 0;
+  color: #313131;
+  line-height: 20px;
+  white-space: nowrap;
+   overflow: hidden;
+  text-overflow: ellipsis;
+}

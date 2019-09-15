@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar><ion-buttons slot="start">
+      <ion-menu-button>
+          <img src="../../assets/image/menuicon.png" >
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Sms Broadcast</ion-title>
+    <ion-buttons slot="end">
+        <ion-button ion-button icon-only color="royal" (click)="gotoSms()">
+          <ion-icon name="paper-plane" class="f25 colFFF"></ion-icon>
+        </ion-button>
+    </ion-buttons>  
+  </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="bgf3">
+      <ion-list *ngIf="listShow">
+          <!-- loop start -->
+          <ion-item class="innerbor">
+              <ion-label class="textColor">Select All</ion-label>
+              <ion-checkbox slot="end" 
+              [(ngModel)]="masterCheck"
+              [indeterminate]="isIndeterminate"
+                (click)="checkMaster($event)"></ion-checkbox>
+            </ion-item>
+          <ion-item class="bottomLine" lines="none" class="oddno" *ngFor="let item of checkBoxList; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+            <ion-avatar slot="start">
+              <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                imageViewer>
+            </ion-avatar>
+            <div>
+              <h2 class="fontCan color65">{{item.personf}}</h2>
+              <p>{{item.mobile}}</p>
+            </div>
+             <ion-checkbox slot="end"
+                [(ngModel)]="item.isChecked"  
+                (ionChange)="checkEvent()" checked>
+            </ion-checkbox>
+             
+          </ion-item>
+          <!-- loop end -->
+        </ion-list>
+        <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="fabBtn">
+          <ion-fab-button ion-fab (click)="openFilterModal()" style="--background: #3284e8 !important;">
+            <ion-icon name="funnel"></ion-icon>
+          </ion-fab-button>
+        </ion-fab>
+        <div *ngIf="!listShow">
+          <p class="datanot">Data Not Found</p>
+       </div> 
+  </ion-content>
+  

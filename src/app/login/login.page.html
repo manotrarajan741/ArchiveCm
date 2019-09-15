@@ -1,0 +1,27 @@
+<ion-content class="bgf3">
+  <div class="logoImg">
+     <img src="../../assets/image/logo.png" class="h150">
+     <!-- <p class="appText textColor"> Marketing App </p> -->
+     <div class="m8p"> 
+        <ion-item class="bgf3">
+            <ion-icon ios="ios-person" md="md-person" class="textColor iconImg"></ion-icon>
+            <ion-input type="text" placeholder="Username" [(ngModel)]="username" class="textColor fontCan"></ion-input>
+       </ion-item>
+        <ion-item class="bgf3">
+            <ion-icon ios="ios-lock" md="md-lock" class="textColor iconImg"></ion-icon>
+            <ion-input type="password" placeholder="Password" [(ngModel)]="password" class="textColor fontCan" ></ion-input>
+        </ion-item>
+        <div class="f12 m7p">
+            <label class="disFlex">
+              <ion-checkbox [(ngModel)]="tstatus" class="cb"></ion-checkbox>
+             <p class="text_p textColor fontCan"> Remember Me</p>
+            </label>
+          </div>
+          <div>
+              <ion-button expand="block" class="loginBtn fontCan" (click)="login()">Login</ion-button>
+          </div>
+    </div>
+   
+  </div>
+ 
+</ion-content>

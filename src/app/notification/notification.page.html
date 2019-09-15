@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar><ion-buttons slot="start">
+    <ion-menu-button>
+        <img src="../../assets/image/menuicon.png" >
+    </ion-menu-button>
+  </ion-buttons>
+  <ion-title>Notifications</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+    <div *ngIf="listShow">
+    <ion-card class="disFlex bgnew posrel" *ngFor="let item of notiList; let i = index"> 
+      <div class="statusdiv" *ngIf="item.status == '1'"><img src="../../assets/image/gdot.png"></div>
+      <div class="statusdiv" *ngIf="item.status == '0'"><img src="../../assets/image/rdot.png"></div>
+        <ion-card-header class="w100">
+          <ion-card-content class="p0 bbc">
+             {{item.event_msg}}
+              <ion-card-subtitle class="fontCan statustime"> {{item.event_date}} </ion-card-subtitle> 
+            </ion-card-content>
+            <ion-card-subtitle class="fontCan tr fw600" >Status : 
+                <ion-radio-group  id="group{{i}}">
+                  <ion-radio  [value]="1" id="radio{{i}}" class="form-radio" [checked]="item.status == '1'"  (ionSelect)="onChangeTime('1',item.noti_id)"> </ion-radio><label for="radio-one" class="mr6 fontCan">Yes</label>
+                  <ion-radio  [value]="0" id="radio{{i}}" class="form-radio" [checked]="item.status == '0'" (ionSelect)="onChangeTime('0',item.noti_id)"> </ion-radio><label for="radio-one" class="fontCan">No</label>
+                </ion-radio-group>
+            </ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </div>
+    <div *ngIf="!listShow">
+       <p class="datanot">Data Not Found</p>
+    </div>       
+</ion-content>

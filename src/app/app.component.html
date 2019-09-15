@@ -1,0 +1,25 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu type="overlay">
+      <ion-header>
+       <div class="sidemenuDiv">
+          <img src="../../assets/image/logo.png" class="h70">
+          <p>{{nameLogin}}</p>
+        </div>
+      </ion-header>
+      <ion-content>
+        <ion-list class="menuMar">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [class.activeItem]="isActive(p.url)" [routerLink]="[p.url]" class="innerbor"> 
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label class="fontCan">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

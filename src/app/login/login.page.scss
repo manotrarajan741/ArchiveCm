@@ -1,0 +1,58 @@
+.logoImg{
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;
+ }
+ .appText{
+    margin: 0px;
+    font-size: 22px;
+    font-family: 'Arbutus Slab', serif;
+    margin-top: 15px;
+ }
+ .iconImg{
+    font-size: 18px;
+    margin-right: 15px;
+ }
+ .text_p{margin-left: 5px;text-transform: capitalize;}
+ label input {
+    display: none; 
+  }
+  
+   label span {
+    height: 16px;
+    width: 16px;
+    border: 1px solid #3284e8;
+    display: inline-block;
+    position: relative;
+    text-transform: capitalize;
+    color: #65a8f9;
+    font-weight: 500;
+  }
+  [type=checkbox]:checked + span:before {
+    content: '\2714';
+    position: absolute;
+    top: -2px;
+    left: 1px;
+  }
+  .loginBtn{
+   --background: #3284e8;
+   --border-radius: 50px;
+   height: 50px;
+   text-transform: capitalize;
+   font-size: 16px;
+   font-weight: 600;
+  }
+  ion-item {
+   --highlight-color-valid: #3284e8;
+   --highlight-color-invalid: #3284e8;
+  }
+  .item-native {
+     --padding-left: 10px;
+  }
+
+  .cb{ --border-color: #3284e8;
+   --border-radius: 2px;
+   --border-width:1px
+  }

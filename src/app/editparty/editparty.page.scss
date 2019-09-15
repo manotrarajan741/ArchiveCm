@@ -1,0 +1,55 @@
+ion-item {
+    --highlight-color-valid: #3284e8;
+    --highlight-color-invalid: #3284e8;
+}
+.datecss{
+    width: 100%;
+    background: transparent;
+    border: 0px;
+}
+.loginBtn{
+--background: #3284e8;
+--border-radius: 50px;
+height: 50px;
+text-transform: capitalize;
+font-size: 16px;
+font-weight: 600;
+}
+.image_div{height: 150px; width: 150px;margin: 0 auto; background-color: #eceff1; border-radius: 50%; line-height: 150px; font-size: 18px; text-align: center;position: relative;}
+.file_chooser{    
+    height: 30px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 115px;
+    left: 35px;
+    opacity: 0;
+    right: 0;
+    margin: auto;
+    z-index: 99999;
+}
+.ptag{
+    z-index: 5;
+    position: absolute;
+    top: 65px;
+    left: 50px;
+    height: 30px;
+    width: 150px;
+}
+.plusIma{
+    height: 30px;
+    width: 30px;
+}
+.imgPlaceholder{height: 150px;
+width: 150px;
+margin: 0 auto;
+background-color: #eceff1;
+border-radius: 50%;
+line-height: 150px;
+font-size: 18px;
+text-align: center;
+position: absolute;
+top: 0px;
+right: 0;
+left: 0;
+}

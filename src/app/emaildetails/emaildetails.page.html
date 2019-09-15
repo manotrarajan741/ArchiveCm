@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+       <ion-buttons slot="start">
+          <ion-back-button class="colorfff"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Email Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+    <div class="m2p"> 
+        <ion-item class="bgf3">
+            <ion-label position="floating" class="textColor fontCan">Subject</ion-label>
+            <ion-input type="text"  class="textColor fontCan" [(ngModel)]="subject"></ion-input>
+        </ion-item>
+        <p class="textColor fontCan mAll">Message</p>
+        <div class="image_div m_t_30">
+          <div class="w40p posrel">
+          <ion-button expand="block"  class="">Select Image</ion-button> 
+          <input type="file" class="file_chooser" (change)="showPreviewImage($event)"  accept="image/*" onerror="this.src='assets/image/avatar.jpg';"/>
+          </div>
+          <div class="w20p posrel">
+          <img  [src]="localUrl" *ngIf="localUrl" class="imgPlaceholder"> 
+          </div>
+          <div class="w40p">
+          <ion-button expand="block" *ngIf="localUrl" (click)="uploadImage()">Upload Image</ion-button>
+          </div>
+      </div>
+      <div *ngIf="uploadText">
+         <input [(ngModel)]="CopyText" class="textCopy"/>
+         <ion-icon name="copy"  (click)="copyText()" class="f25"></ion-icon>
+      </div>
+        
+        <div class="mt10">
+            <!-- <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="message" [config]="config"></angular-editor>-->
+           <ckeditor
+              [(ngModel)]="message"
+              [readonly]="false"
+              (focus)="onFocus($event)"
+              (blur)="onBlur($event)"
+              (fileUploadRequest)="onFileUploadRequest($event)"
+              (fileUploadResponse)="onFileUploadResponse($event)"
+              (paste)="onPaste($event)"
+              (drop)="onDrop($event)"
+              debounce="500">
+            </ckeditor>
+        </div>
+          <div class="mt10">
+              <ion-button expand="block" class="loginBtn fontCan" (click)="emailSend()">Send</ion-button>
+          </div>    
+    </div>
+    
+</ion-content>

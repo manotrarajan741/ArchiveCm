@@ -1,0 +1,78 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-base64-to-gallery": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.vthink.cm"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.vthink.cm"
+    }
+  }
+}

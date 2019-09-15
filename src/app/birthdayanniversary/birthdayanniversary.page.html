@@ -1,0 +1,146 @@
+<ion-header>
+  <ion-toolbar><ion-buttons slot="start">
+    <ion-menu-button>
+        <img src="../../assets/image/menuicon.png" >
+    </ion-menu-button>
+  </ion-buttons>
+  <ion-title>Birthday / Anniversary</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+ <div class="w100">
+   <div class="W100 disFlex tabdiv"> 
+      <div class="w50 tabsleft fontCan" [ngClass]="active==1?'activetab':'inactivetab'" (click)="tabSelect(1)">Today's</div>
+      <div class="w50 tabright fontCan" [ngClass]="active==1?'inactivetab':'activetab'" (click)="tabSelect(2)">Upcoming</div>
+   </div>
+ </div>
+ <div *ngIf="tabShow1">
+     <!-- Today's Birthday -->
+    <ion-list class="mb10">
+        <div >
+          <div class="titlediv" *ngIf="listShowBirth">
+          <p class="f16 color65">Today's Birthday</p>   
+          </div>
+          <ion-item class="bottomLine" lines="none" *ngFor="let item of toBirth; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+            <ion-avatar slot="start">
+              <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                imageViewer>
+            </ion-avatar>
+            <div>
+              <h2 class="fontCan color65">{{item.personf}}</h2>
+              <p><span>{{item.birthdate}}</span></p>
+            </div>
+            <ion-button fill="outline" slot="end" (click)="gotowishcard('birthday',item.personf)">Wish</ion-button>
+          </ion-item>
+        </div> 
+      </ion-list>
+   <!-- Today's Birthday -->
+    <!-- Today's Anniversary -->
+   <ion-list class="mb10">
+      <div>
+          <div class="titlediv" *ngIf="listShowAnni">
+          <p class="f16 color65">Today's Anniversary</p>   
+          </div>
+          <ion-item class="bottomLine" lines="none" *ngFor="let item of toAnniversary; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+              <ion-avatar slot="start">
+                <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                  imageViewer>
+              </ion-avatar>
+              <div>
+                <h2 class="fontCan color65">{{item.personf}}</h2>
+                <p><span>{{item.anniversarydate}}</span></p>
+              </div>
+              <ion-button fill="outline" slot="end" (click)="gotowishcard('anniversary',item.personf)">Wish</ion-button>
+            </ion-item>
+        </div>   
+    </ion-list>
+      <!-- Today's Anniversary -->
+       <!-- Today's Company Anniversary -->
+   <ion-list>
+      <div>
+          <div class="titlediv" *ngIf="listShowComAnni">
+          <p class="f16 color65">Today's Company Anniversary</p>   
+          </div>
+          <ion-item class="bottomLine" lines="none" *ngFor="let item of toComAnniversary; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+              <ion-avatar slot="start">
+                <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                  imageViewer>
+              </ion-avatar>
+              <div>
+                <h2 class="fontCan color65">{{item.companyname}}</h2>
+                <p><span>{{item.comanniversarydate}}</span></p>
+              </div>
+              <ion-button fill="outline" slot="end" (click)="gotowishcard('comAnniversary',item.companyname)">Wish</ion-button>
+            </ion-item>
+        </div>   
+    </ion-list>
+      <!-- Today's Company Anniversary -->
+  </div>
+
+  <div *ngIf="tabShow2">
+      <!-- Upcoming Birthday -->
+  <ion-list class="mb10">
+   
+     <div >
+       <div class="titlediv" *ngIf="listShowUpBirth">
+       <p class="f16 color65">Upcoming Birthday</p>   
+       </div>
+       <ion-item class="bottomLine" lines="none" *ngFor="let item of upBirth; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+              <ion-avatar slot="start">
+                <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                  imageViewer>
+              </ion-avatar>
+              <div>
+                <h2 class="fontCan color65">{{item.personf}}</h2>
+                <p><span>{{item.birthdate}}</span></p>
+              </div>
+             
+       </ion-item>
+     </div>
+      
+    </ion-list>
+    <!-- Upcoming Birthday -->
+     <!-- Upcoming Anniversary -->
+    <ion-list class="mb10">
+       <div>
+           <div class="titlediv" *ngIf="listShowUPAnni">
+           <p class="f16 color65">Upcoming Anniversary</p>   
+           </div>
+           <ion-item class="bottomLine" lines="none" *ngFor="let item of upAnniversary; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+              <ion-avatar slot="start">
+                <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                  imageViewer>
+              </ion-avatar>
+              <div>
+                <h2 class="fontCan color65">{{item.personf}}</h2>
+                <p><span>{{item.anniversarydate}}</span></p>
+              </div>    
+       </ion-item>
+         </div>   
+     </ion-list>
+       <!-- Upcoming Anniversary -->
+      <!-- Upcoming Company Anniversary -->
+    <ion-list>
+        <div>
+            <div class="titlediv" *ngIf="listShowUPComAnni">
+            <p class="f16 color65">Upcoming Company Anniversary</p>   
+            </div>
+            <ion-item class="bottomLine" lines="none" *ngFor="let item of upComAnniversary; let i = index" [ngClass]="i%2 == 0?'evenno':'oddno'">
+               <ion-avatar slot="start">
+                 <img src="{{item.full_image_profile}}" onerror="this.src='assets/image/avatar.jpg';"
+                   imageViewer>
+               </ion-avatar>
+               <div>
+                 <h2 class="fontCan color65">{{item.companyname}}</h2> 
+                 <p><span>{{item.comanniversarydate}}</span></p>
+               </div>    
+        </ion-item>
+          </div>   
+      </ion-list>
+      <!-- Upcoming Company Anniversary -->
+   </div>
+  <!-- <div *ngIf="!tabShow1">
+    <p class="tc">List Not Found</p>
+  </div> -->
+</ion-content>

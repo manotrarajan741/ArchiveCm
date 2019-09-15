@@ -1,0 +1,23 @@
+.select-md , .select-ios{padding: 7px 8px 7px 16px;}
+.label-md, label-ios {margin: 7px 8px 7px 0;}
+ion-col{padding: 0px; height: 40px;}
+ion-label{line-height: 35px; overflow: hidden; text-overflow: ellipsis;  white-space: nowrap;}
+.p15{padding: 15px;}
+.loginBtn{
+    --background: #3284e8;
+    --border-radius: 50px;
+    height: 50px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 600;
+    }
+  .btndiv{
+    position: absolute;
+    width: 100%;
+    bottom: 3%;
+  } 
+  .sc-ion-card-md-h {
+    box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 0px 0 rgba(0,0,0,.14), 0 0px 2px 0 rgba(0,0,0,.12);
+    --background:#fff;
+  }
+  .cardCss{margin: 0px;padding: 5px; margin-bottom: 10px;}

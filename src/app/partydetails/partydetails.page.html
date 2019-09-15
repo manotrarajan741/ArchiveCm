@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button class="colorfff" (click)="listParty()"></ion-back-button>
+        </ion-buttons>
+    <ion-title class="">Profile Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+ <div  class="bg32 h70 tc posrel">
+   <div class="editdel"> 
+       <div class="mr6" (click)="editParty(partyListDetails.id)">
+          <ion-icon name="create"></ion-icon>
+        </div>
+        <div (click)="presentAlertConfirm(partyListDetails.id)">
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+       </div>
+   </div>
+   <div>
+      <img src="{{partyListDetails.full_image_profile}}" class="imgPro" onerror="this.src='assets/image/avatar.jpg';"
+      imageViewer>
+   </div>
+ </div>
+ <div class="mt60">
+   <div class="namediv">
+     <h2 class="tc nameText color65 fontCan">{{partyListDetails.personf}}</h2>
+     <p class="tc fontCan">{{partyListDetails.post}}</p>
+     <p class="tc fontCan f12">{{partyListDetails.companyname}}</p>
+   </div>
+ </div>
+ <div class="mb10">
+   <div class="details"><p class="fontCan color65">Personal Details</p></div>  
+   <div class="bgFFF">
+      <div class="info_name w100 disFlex ptb10"><p class="w25 ">Group Name</p><p class="w2">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.groupname}}</b></p></div> 
+    </div>  
+   <div class="bgFFF">
+      <div class="info_name w100 disFlex ptb10"><p class="w25 ">Address</p><p class="w2">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.address}}</b></p></div> 
+     </div> 
+     <div class="bgFFF">
+       <div class="info_name w100 disFlex ptb10"><p class="w25 ">Mobile</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><a href="tel:{{partyListDetails.mobile}}" *ngIf="partyListDetails.mobile != ''"><b>{{partyListDetails.mobile}}</b></a></p></div>  
+     </div> 
+     <div class="bgFFF">
+      <div class="info_name w100 disFlex ptb10"><p class="w25 ">Email</p><p class="w2 ">:</p><p class="w73 pr20 fontCan"><a href="mailto:{{partyListDetails.email}}" *ngIf="partyListDetails.email != ''"><b>{{partyListDetails.email}}</b></a></p></div>  
+     </div> 
+     <div class="bgFFF">
+       <div class="info_name w100 disFlex ptb10"><p class="w25 ">City</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.city}}</b></p></div>
+     </div>
+     <div class="bgFFF">
+       <div class="info_name w100 disFlex ptb10"><p class="w25 ">State</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.state}}</b></p></div>
+     </div>
+     <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w25 ">Country</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.country}}</b></p></div>
+      </div>
+      <div class="bgFFF">
+       <div class="info_name w100 disFlex ptb10"><p class="w25 ">Pincode</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.pincode}}</b></p></div>
+     </div>
+     <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w25 ">Brithday</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.birthdate}}</b></p></div>
+      </div>
+      <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w25 ">Anniversary Date</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.anniversarydate}}</b></p></div>
+      </div>
+      <div class="bgFFF">
+          <div class="info_name w100 disFlex ptb10"><p class="w25 ">Company Anniversary</p><p class="w2 ">:</p><p  class="w73 pr20 fontCan"><b>{{partyListDetails.comanniversarydate}}</b></p></div>
+        </div>
+
+
+     <div class="details mt10"><p class="fontCan color65">Contact Details</p></div> 
+     <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Contact Person 1</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.personf}}</b></p></div>
+     </div>
+     <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Mobile 1</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><a href="tel:{{partyListDetails.mobilef}}" *ngIf="partyListDetails.mobilef != ''"><b>{{partyListDetails.mobilef}}</b></a></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Contact Person 2</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.persons}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Mobile 2</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><a href="tel:{{partyListDetails.mobiles}}" *ngIf="partyListDetails.mobiles != ''"><b>{{partyListDetails.mobiles}}</b></a></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Contact Person 3</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.persont}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Mobile 3</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><a href="tel:{{partyListDetails.mobilet}}" *ngIf="partyListDetails.mobilet != ''"><b>{{partyListDetails.mobilet}}</b></a></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Contact Person 4</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.personfour}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Mobile 4</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><a href="tel:{{partyListDetails.mobilefour}}" *ngIf="partyListDetails.mobilefour != ''"><b>{{partyListDetails.mobilefour}}</b></a></p></div>
+    </div> 
+
+    <div class="details mt10"><p class="fontCan color65">Bank Details</p></div>  
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Bank Details</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.bankdetail}}</b></p></div>
+     </div>
+     <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">Bank Account No</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.bankaccountno}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">RTGS/ NEFT IFSC Code</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.ifsccode}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">MICR</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.micr}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">GSTN NO</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.gstnno}}</b></p></div>
+    </div>
+    <div class="bgFFF">
+        <div class="info_name w100 disFlex ptb10"><p class="w34">PAN NO</p><p class="w2 ">:</p><p  class="w64 pr20 fontCan"><b>{{partyListDetails.panno}}</b></p></div>
+    </div>
+    
+</div>
+</ion-content>

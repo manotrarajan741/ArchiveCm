@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button class="colorfff"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Wishcard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bgf3">
+  
+<div class="m2p posrel" *ngIf="birthday">
+ <div id="preview" class="w100"  [ngStyle]="{'max-height': '' + widthpx + 'px'}">
+  <img src="{{imagepath}}" class="w100">
+  <p class="textname top55">{{name}}</p>
+ </div>
+</div>
+<div class="mt10 btndiv" *ngIf="birthday">
+    <ion-button expand="block" class="loginBtn fontCan" (click)="wishSendBirthday()">Wish Send</ion-button> 
+</div>
+
+
+<div class="m2p posrel" *ngIf="anniversary">
+    <div id="preview1" class="w100"  [ngStyle]="{'max-height': '' + widthpx + 'px'}">
+        <img src="{{imagepath1}}" class="w100">
+        <p class="textname top63">{{name}}</p>
+       </div>
+  </div>
+  <div class="mt10 btndiv" *ngIf="anniversary">
+      <ion-button expand="block" class="loginBtn fontCan" (click)="wishSendAnniversary()">Wish Send</ion-button>
+  </div>
+
+  
+  <div class="m2p posrel" *ngIf="comAnniversary">
+      <div id="preview2" class="w100"  [ngStyle]="{'max-height': '' + widthpx + 'px'}">
+          <img src="{{imagepath2}}" class="w100">
+          <p class="textname top63">{{name}}</p>
+         </div>
+    </div>
+    <div class="mt10 btndiv" *ngIf="comAnniversary">
+        <ion-button expand="block" class="loginBtn fontCan" (click)="wishSendComAnniversary()">Wish Send</ion-button>
+    </div>
+</ion-content>

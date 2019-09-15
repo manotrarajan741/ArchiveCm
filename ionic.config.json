@@ -1,0 +1,7 @@
+{
+  "name": "Client Manager",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

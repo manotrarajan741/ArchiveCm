@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+         <ion-buttons slot="start">
+            <ion-back-button class="colorfff"></ion-back-button>
+          </ion-buttons>
+      <ion-title>Sms Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="bgf3">
+    <div class="fullP p15">
+      <ion-radio-group   class="w100 disFlex">
+          <p class="w50"> <ion-radio  [value]="0" id="radio" class="form-radio" checked (ionSelect)="mcqAnswer(0)"></ion-radio>
+            <label for="radio-one" class="mr6 fontCan">Main</label>
+         </p>
+          <p class="w50"> <ion-radio  [value]="1" id="radio" class="form-radio"  (ionSelect)="mcqAnswer(1)">
+            </ion-radio><label for="radio-one" class="fontCan">Main + Sub</label>
+          </p>
+        </ion-radio-group>
+     </div> 
+      <div class="m2p"> 
+            <ion-item class="bgf3">
+              <ion-label position="floating" class="textColor fontCan">Message</ion-label>
+              <ion-textarea class="textColor fontCan" rows="5" [(ngModel)]="message" (ionChange)='onChangeText($event.target.value)'></ion-textarea>
+            </ion-item> 
+            <p class="msgTxt" *ngIf="testShow">{{remaining}}</p>
+            <p class="msgTxt" *ngIf="testShow">{{messagesAll}}</p>
+            <div class="mt10 btndiv">
+                <ion-button expand="block" class="loginBtn fontCan" (click)="smsSend()">Send</ion-button>
+            </div>    
+      </div>
+  </ion-content>
+  
